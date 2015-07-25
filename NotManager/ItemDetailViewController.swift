@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class ItemDetailViewController: UIViewController {
     
@@ -15,4 +16,10 @@ class ItemDetailViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func sendPushNotification(sender: AnyObject) {
+        PFCloud.callFunction("PushiOS", withParameters: nil)
+    }
+    @IBAction func sendAndroidNotification(sender: AnyObject) {
+        PFCloud.callFunction("PushAndroid", withParameters: nil)
+    }
 }

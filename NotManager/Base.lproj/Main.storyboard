@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O0O-wA-fTo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O0O-wA-fTo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +16,33 @@
                     <view key="view" contentMode="scaleToFill" id="sLA-Go-Yjd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-Ni-iOf">
+                                <rect key="frame" x="133" y="114" width="148" height="30"/>
+                                <state key="normal" title="Send iOS Notification">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPushNotification:" destination="wIc-ik-DVj" eventType="touchUpInside" id="ZJm-WB-w4F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3p-GA-A6G">
+                                <rect key="frame" x="119" y="164" width="176" height="30"/>
+                                <state key="normal" title="Send Android Notification">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAndroidNotification:" destination="wIc-ik-DVj" eventType="touchUpInside" id="BO4-AU-aVq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="o3p-GA-A6G" secondAttribute="centerX" id="Sxs-fH-s0F"/>
+                            <constraint firstItem="o3p-GA-A6G" firstAttribute="top" secondItem="SZ2-Ni-iOf" secondAttribute="bottom" constant="20" id="Tq2-Ij-1m8"/>
+                            <constraint firstItem="SZ2-Ni-iOf" firstAttribute="top" secondItem="Vbr-p1-4q7" secondAttribute="bottom" constant="50" id="YHl-ob-JSC"/>
+                            <constraint firstAttribute="centerX" secondItem="SZ2-Ni-iOf" secondAttribute="centerX" id="znW-ck-53L"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aw-CN-bVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
