@@ -12,7 +12,7 @@ import UIKit
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var statusArr: [String] = ["Working in office", "Walking on street", "A calendar event", "Watch movie in fullscreen"]
+    var statusArr: [String] = ["Working in office", "Walking on street", "An appointment in calendar", "Watch movie in fullscreen", "Phone is idle"]
     
     private let cellIdentifier = "Setting Cell"
     
@@ -23,6 +23,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         var nib = UINib(nibName: "SettingCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: cellIdentifier)
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        statusArr.shuffle()
     }
     
     // MARK: Table View
@@ -39,8 +41,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         // fetch user default setting
         let userDefaults = NSUserDefaults.standardUserDefaults()
         var count = 0
-        if userDefaults.objectForKey(Constants.USER_DEFAULTS_KEYS[indexPath.row]) != nil {
-            count = userDefaults.objectForKey(Constants.USER_DEFAULTS_KEYS[indexPath.row]) as! Int
+        if userDefaults.objectForKey(Constants.USER_DEFAULTS_KEYS[statusArr[indexPath.row]]!) != nil {
+            count = userDefaults.objectForKey(Constants.USER_DEFAULTS_KEYS[statusArr[indexPath.row]]!) as! Int
         }
         cell.detailLabel.text = Constants.notificationModes[NotificationModal.getNotificationModeByCount(count)] + ", " + Constants.phoneModes[NotificationModal.getPhoneModeByCount(count)]
         
@@ -72,7 +74,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 row = indexPath.row
             }
             notificationSettingViewController.status = self.statusArr[row]
-            notificationSettingViewController.key = Constants.USER_DEFAULTS_KEYS[row]
+            notificationSettingViewController.key = Constants.USER_DEFAULTS_KEYS[self.statusArr[row]]!
         }
     }
 }

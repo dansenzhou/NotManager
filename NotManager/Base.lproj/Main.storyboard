@@ -182,13 +182,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwa-99-adL">
-                                <rect key="frame" x="21" y="84" width="51" height="21"/>
+                                <rect key="frame" x="21" y="84" width="50.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dSi-jb-sVT">
-                                <rect key="frame" x="0.0" y="223" width="414" height="498"/>
+                                <rect key="frame" x="0.0" y="222" width="414" height="498.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Notification Modal Cell" id="lg5-kE-ICU">
@@ -204,7 +204,7 @@
                                 </connections>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uns-Ie-afJ">
-                                <rect key="frame" x="16" y="113" width="382" height="95"/>
+                                <rect key="frame" x="16" y="112" width="382" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="Hzu-8u-65A"/>
@@ -213,16 +213,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3E-6B-VOL">
+                                <rect key="frame" x="343" y="80" width="35" height="30"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPushNotification:" destination="XpJ-jB-tcE" eventType="touchUpInside" id="S1G-dt-BQT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="56g-iN-vg6" firstAttribute="top" secondItem="dSi-jb-sVT" secondAttribute="bottom" constant="15" id="10b-ty-81u"/>
                             <constraint firstItem="uns-Ie-afJ" firstAttribute="top" secondItem="Kwa-99-adL" secondAttribute="bottom" constant="8" id="BWa-HH-Y5g"/>
                             <constraint firstItem="dSi-jb-sVT" firstAttribute="top" secondItem="uns-Ie-afJ" secondAttribute="bottom" constant="15" id="GbB-AQ-PjG"/>
+                            <constraint firstItem="M3E-6B-VOL" firstAttribute="top" secondItem="kQz-Oc-bgb" secondAttribute="bottom" constant="16" id="Ppp-5u-oND"/>
                             <constraint firstItem="Kwa-99-adL" firstAttribute="top" secondItem="kQz-Oc-bgb" secondAttribute="bottom" constant="20" id="XlR-bV-jxz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dSi-jb-sVT" secondAttribute="trailing" constant="-16" id="bXD-dg-FQg"/>
                             <constraint firstItem="Kwa-99-adL" firstAttribute="leading" secondItem="65G-LQ-pGU" secondAttribute="leadingMargin" constant="5" id="eCt-NF-XeR"/>
                             <constraint firstItem="uns-Ie-afJ" firstAttribute="trailing" secondItem="65G-LQ-pGU" secondAttribute="trailingMargin" id="mUB-0I-8wV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M3E-6B-VOL" secondAttribute="trailing" constant="20" id="okC-dQ-Eon"/>
                             <constraint firstItem="dSi-jb-sVT" firstAttribute="leading" secondItem="65G-LQ-pGU" secondAttribute="leadingMargin" constant="-16" id="rPU-LU-Wj7"/>
                             <constraint firstItem="uns-Ie-afJ" firstAttribute="leading" secondItem="65G-LQ-pGU" secondAttribute="leadingMargin" id="yKX-Qm-DIY"/>
                         </constraints>
@@ -240,7 +251,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gl0-QE-NPf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O0O-wA-fTo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="initialViewController" automaticallyAdjustsScrollViewInsets="NO" id="O0O-wA-fTo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g1c-h9-43W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -17,9 +17,12 @@ class ItemDetailViewController: UIViewController {
     }
     
     @IBAction func sendPushNotification(sender: AnyObject) {
-        PFCloud.callFunction("PushiOS", withParameters: nil)
+        //PFCloud.callFunction("PushSituation1", withParameters: nil)
     }
+    
     @IBAction func sendAndroidNotification(sender: AnyObject) {
         PFCloud.callFunction("PushAndroid", withParameters: nil)
     }
+    
+    
 }

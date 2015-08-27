@@ -18,8 +18,10 @@ class NotificationModal {
     class func getPhoneModeByCount(count: Int) -> Int {
         switch count {
         case 2, 3, 4:
+            // sound
             return 0
         case 5, 6, 7:
+            // mute
             return 1
         default:
             return 0
@@ -29,10 +31,13 @@ class NotificationModal {
     class func getNotificationModeByCount(count: Int) -> Int {
         switch count {
         case 2, 5:
+            // Banner/Alert
             return 0
         case 3, 6:
+            // Badge
             return 1
         case 4, 7:
+            // Both
             return 2
         default:
             return 0

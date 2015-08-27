@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643BC6721B63DBCD00CF4620 /* UserFeedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643BC6711B63DBCD00CF4620 /* UserFeedback.storyboard */; };
+		643BC6741B63DD1000CF4620 /* UserFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643BC6731B63DD1000CF4620 /* UserFeedbackViewController.swift */; };
 		643E0CF11B21A4B500FFDA2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E0CF01B21A4B500FFDA2A /* AppDelegate.swift */; };
 		643E0CF61B21A4B500FFDA2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643E0CF41B21A4B500FFDA2A /* Main.storyboard */; };
 		643E0CF81B21A4B500FFDA2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643E0CF71B21A4B500FFDA2A /* Images.xcassets */; };
@@ -22,6 +24,7 @@
 		644818DD1B24BC2A00C8738D /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644818DC1B24BC2A00C8738D /* SettingCell.swift */; };
 		644818DF1B26F2EB00C8738D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644818DE1B26F2EB00C8738D /* Constants.swift */; };
 		644818E11B274E5E00C8738D /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644818E01B274E5E00C8738D /* Restaurant.swift */; };
+		6469C7441B8EFD5000AECADB /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469C7431B8EFD5000AECADB /* Array.swift */; };
 		647250CD1B39F2B0009B3A12 /* NotificationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647250CC1B39F2B0009B3A12 /* NotificationModal.swift */; };
 		64B35CD01B34681900D601EB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B35CCE1B34681900D601EB /* Bolts.framework */; };
 		64B35CD11B34681A00D601EB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B35CCF1B34681900D601EB /* Parse.framework */; };
@@ -49,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		643BC6711B63DBCD00CF4620 /* UserFeedback.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFeedback.storyboard; sourceTree = "<group>"; };
+		643BC6731B63DD1000CF4620 /* UserFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFeedbackViewController.swift; sourceTree = "<group>"; };
 		643E0CEB1B21A4B500FFDA2A /* NotManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		643E0CEF1B21A4B500FFDA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		643E0CF01B21A4B500FFDA2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +73,7 @@
 		644818DC1B24BC2A00C8738D /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		644818DE1B26F2EB00C8738D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		644818E01B274E5E00C8738D /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		6469C7431B8EFD5000AECADB /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		647250CC1B39F2B0009B3A12 /* NotificationModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModal.swift; sourceTree = "<group>"; };
 		64B35CCE1B34681900D601EB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
 		64B35CCF1B34681900D601EB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 		643E0CED1B21A4B500FFDA2A /* NotManager */ = {
 			isa = PBXGroup;
 			children = (
+				6469C7421B8EFD4600AECADB /* Util */,
 				647250D21B39F313009B3A12 /* Model */,
 				647250D11B39F2FE009B3A12 /* Constants */,
 				647250D01B39F2F0009B3A12 /* StoryBoard */,
@@ -177,6 +184,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6469C7421B8EFD4600AECADB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6469C7431B8EFD5000AECADB /* Array.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		647250CE1B39F2B4009B3A12 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +199,7 @@
 				643E0D161B24805600FFDA2A /* ItemDetailViewController.swift */,
 				643E0D1A1B24AE3E00FFDA2A /* NotificationSettingViewController.swift */,
 				643E0D181B2484BB00FFDA2A /* SettingViewController.swift */,
+				643BC6731B63DD1000CF4620 /* UserFeedbackViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				643E0CF41B21A4B500FFDA2A /* Main.storyboard */,
+				643BC6711B63DBCD00CF4620 /* UserFeedback.storyboard */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -329,6 +346,7 @@
 				644818DB1B24BC0300C8738D /* SettingCell.xib in Resources */,
 				643E0CF61B21A4B500FFDA2A /* Main.storyboard in Resources */,
 				643E0CFB1B21A4B500FFDA2A /* LaunchScreen.xib in Resources */,
+				643BC6721B63DBCD00CF4620 /* UserFeedback.storyboard in Resources */,
 				643E0CF81B21A4B500FFDA2A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +374,8 @@
 				644818DF1B26F2EB00C8738D /* Constants.swift in Sources */,
 				643E0D111B21AA3C00FFDA2A /* RecommendedResultViewController.swift in Sources */,
 				647250CD1B39F2B0009B3A12 /* NotificationModal.swift in Sources */,
+				6469C7441B8EFD5000AECADB /* Array.swift in Sources */,
+				643BC6741B63DD1000CF4620 /* UserFeedbackViewController.swift in Sources */,
 				644818E11B274E5E00C8738D /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

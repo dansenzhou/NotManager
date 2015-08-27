@@ -124,4 +124,28 @@ class NotificationSettingViewController: UIViewController, UITableViewDelegate, 
     override func viewDidAppear(animated: Bool) {
         count = 0
     }
+    
+    @IBAction func sendPushNotification(sender: AnyObject) {
+        switch key {
+        case Constants.USER_DEFAULTS_WALK_ON_STREET:
+            PFCloud.callFunction("PushWalkOnStreet", withParameters: nil)
+            break
+        case Constants.USER_DEFAULTS_WORK_IN_OFFICE:
+            PFCloud.callFunction("PushWorkInOffice", withParameters: nil)
+            break
+        case Constants.USER_DEFAULTS_CALENDAR_EVENT:
+            PFCloud.callFunction("PushCalendarEvent", withParameters: nil)
+            break
+        case Constants.USER_DEFAULTS_FULLSCREEN:
+            PFCloud.callFunction("PushFullscreen", withParameters: nil)
+            break
+        case Constants.USER_DEFAULTS_IDLE:
+            println(Constants.USER_DEFAULTS_IDLE)
+            PFCloud.callFunction("PushIdle", withParameters: nil)
+            break
+        default:
+            break
+        }
+        
+    }
 }

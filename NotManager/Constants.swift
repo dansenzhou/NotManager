@@ -22,7 +22,14 @@ struct Constants {
     static let USER_DEFAULTS_WALK_ON_STREET = "WALK_ON_STREET"
     static let USER_DEFAULTS_CALENDAR_EVENT = "CALENDAR_EVENT"
     static let USER_DEFAULTS_FULLSCREEN = "FULLSCREEN"
-    static let USER_DEFAULTS_KEYS = [Constants.USER_DEFAULTS_WORK_IN_OFFICE, Constants.USER_DEFAULTS_WALK_ON_STREET, Constants.USER_DEFAULTS_CALENDAR_EVENT, Constants.USER_DEFAULTS_FULLSCREEN]
+    static let USER_DEFAULTS_IDLE = "IDLE"
+    
+
+    static let USER_DEFAULTS_KEYS = ["Working in office" : Constants.USER_DEFAULTS_WORK_IN_OFFICE,
+       "Walking on street" : Constants.USER_DEFAULTS_WALK_ON_STREET,
+        "An appointment in calendar" : Constants.USER_DEFAULTS_CALENDAR_EVENT,
+        "Watch movie in fullscreen" : Constants.USER_DEFAULTS_FULLSCREEN,
+        "Phone is idle" : Constants.USER_DEFAULTS_IDLE]
     
     static let COUNT_SOUND = 1
     static let COUNT_MUTE = 4

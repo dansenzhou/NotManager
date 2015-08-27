@@ -93,6 +93,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+        println(userInfo)
+        let storyboard = UIStoryboard(name: "UserFeedback", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("initialViewController") as! UserFeedbackViewController
+        self.window?.rootViewController = vc
+        vc.objectId = userInfo["objectId"] as! String
+        vc.situationLabel.text = userInfo["description"] as? String
+        vc.modeLabel.text = userInfo["mode"] as? String
     }
 }
 

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hza-QP-pbR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Feedback View Controller-->
+        <scene sceneID="8jk-4J-Nhv">
+            <objects>
+                <viewController storyboardIdentifier="initialViewController" id="Hza-QP-pbR" customClass="UserFeedbackViewController" customModule="NotManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YeT-Z9-gcO"/>
+                        <viewControllerLayoutGuide type="bottom" id="3HN-hQ-QOM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DxV-HF-1T8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Situation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tin-i7-8aI">
+                                <rect key="frame" x="153" y="120" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkF-Jk-KdK">
+                                <rect key="frame" x="165" y="180" width="44" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFG-rv-oHF">
+                                <rect key="frame" x="32" y="319" width="311" height="30"/>
+                                <color key="backgroundColor" red="0.71372549019999998" green="0.2666666667" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ZDm-A3-oz1"/>
+                                </constraints>
+                                <state key="normal" title="Like but wrong time">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZDm-A3-oz1"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="likeButWrongTimeAction:" destination="Hza-QP-pbR" eventType="touchUpInside" id="Ql2-sg-Kif"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTD-Pu-dg9">
+                                <rect key="frame" x="32" y="247" width="311" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Dm8-aZ-bxq"/>
+                                </constraints>
+                                <state key="normal" title="Like">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Dm8-aZ-bxq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="likeAction:" destination="Hza-QP-pbR" eventType="touchUpInside" id="LkE-vU-1pn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-cO-Vwf">
+                                <rect key="frame" x="32" y="391" width="311" height="30"/>
+                                <color key="backgroundColor" red="0.74130265880000001" green="0.74130265880000001" blue="0.74130265880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="yDJ-bo-Nhl"/>
+                                </constraints>
+                                <state key="normal" title="Dislike">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yDJ-bo-Nhl"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="dislikeAction:" destination="Hza-QP-pbR" eventType="touchUpInside" id="bmL-3b-KgW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lTD-Pu-dg9" firstAttribute="top" secondItem="AkF-Jk-KdK" secondAttribute="bottom" constant="40" id="0BI-gc-aBg"/>
+                            <constraint firstItem="HFG-rv-oHF" firstAttribute="top" secondItem="lTD-Pu-dg9" secondAttribute="bottom" constant="42" id="6D5-sX-zdc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lTD-Pu-dg9" secondAttribute="trailing" constant="16" id="9Vk-ps-isM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lTD-Pu-dg9" secondAttribute="trailing" constant="80" id="9iD-0P-3Ng"/>
+                            <constraint firstItem="lTD-Pu-dg9" firstAttribute="leading" secondItem="DxV-HF-1T8" secondAttribute="leadingMargin" constant="16" id="BJI-Se-iCE"/>
+                            <constraint firstItem="tin-i7-8aI" firstAttribute="top" secondItem="YeT-Z9-gcO" secondAttribute="bottom" constant="100" id="Eap-KC-FMy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BmK-cO-Vwf" secondAttribute="trailing" constant="16" id="Eky-iW-31X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HFG-rv-oHF" secondAttribute="trailing" constant="16" id="FQP-K1-DVd"/>
+                            <constraint firstItem="AkF-Jk-KdK" firstAttribute="top" secondItem="tin-i7-8aI" secondAttribute="bottom" constant="40" id="Hp1-GK-cU1"/>
+                            <constraint firstItem="BmK-cO-Vwf" firstAttribute="leading" secondItem="DxV-HF-1T8" secondAttribute="leadingMargin" constant="16" id="N7c-vs-u86"/>
+                            <constraint firstItem="lTD-Pu-dg9" firstAttribute="leading" secondItem="HFG-rv-oHF" secondAttribute="trailing" constant="150" id="dAg-z8-WKy"/>
+                            <constraint firstItem="HFG-rv-oHF" firstAttribute="leading" secondItem="DxV-HF-1T8" secondAttribute="leadingMargin" constant="80" id="hnm-9E-XDL"/>
+                            <constraint firstAttribute="centerX" secondItem="tin-i7-8aI" secondAttribute="centerX" id="ihs-Dd-q9m"/>
+                            <constraint firstItem="lTD-Pu-dg9" firstAttribute="top" secondItem="AkF-Jk-KdK" secondAttribute="bottom" constant="46.5" id="kFP-rS-jwe"/>
+                            <constraint firstItem="HFG-rv-oHF" firstAttribute="leading" secondItem="DxV-HF-1T8" secondAttribute="leadingMargin" constant="16" id="mAn-Ny-cpa"/>
+                            <constraint firstAttribute="centerX" secondItem="AkF-Jk-KdK" secondAttribute="centerX" id="nrV-u4-MB1"/>
+                            <constraint firstItem="HFG-rv-oHF" firstAttribute="baseline" secondItem="lTD-Pu-dg9" secondAttribute="baseline" constant="0.5" id="vO7-Yx-9OV"/>
+                            <constraint firstItem="BmK-cO-Vwf" firstAttribute="top" secondItem="HFG-rv-oHF" secondAttribute="bottom" constant="42" id="zCp-Hp-uc1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0BI-gc-aBg"/>
+                                <exclude reference="9iD-0P-3Ng"/>
+                                <exclude reference="dAg-z8-WKy"/>
+                                <exclude reference="hnm-9E-XDL"/>
+                                <exclude reference="vO7-Yx-9OV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="modeLabel" destination="AkF-Jk-KdK" id="eyc-3L-iED"/>
+                        <outlet property="situationLabel" destination="tin-i7-8aI" id="vT3-Zu-IPF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wr7-DI-NW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="298"/>
+        </scene>
+    </scenes>
+</document>
